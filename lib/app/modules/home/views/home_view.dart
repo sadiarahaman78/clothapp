@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-   const HomeView({super.key});
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class HomeView extends GetView<HomeController> {
           ),
           Obx(
                 () => Visibility(
-              visible: Get.find<HomeController>().isVisible.value,
+              visible: controller.isVisible.value,
               child: Container(
-                color: Colors.black.withOpacity(0.5), // Adjust color/opacity
+                color: Colors.black.withOpacity(0.5),
               ),
             ),
           ),
